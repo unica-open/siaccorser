@@ -1,0 +1,128 @@
+<class-diagram version="1.0.10" icons="true" automaticImage="JPEG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" corner="BOTTOM_RIGHT" language="java" name="it.csi.siac.siaccorser.model.ServiceRequest" 
+    project="corServerItf" file="/corServerItf/src/main/java/it/csi/siac/siaccorser/model/ServiceRequest.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="107" y="50"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="2" corner="BOTTOM_RIGHT" language="java" name="it.csi.siac.siaccorser.model.ServiceResponse" 
+    project="corServerItf" file="/corServerItf/src/main/java/it/csi/siac/siaccorser/model/ServiceResponse.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="116" y="214"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="3" corner="BOTTOM_RIGHT" language="java" name="it.csi.siac.siaccorser.model.Richiedente" 
+    project="corServerItf" file="/corServerItf/src/main/java/it/csi/siac/siaccorser/model/Richiedente.java" 
+    binary="false">    
+    <position height="-1" width="-1" x="330" y="122"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="4" corner="BOTTOM_RIGHT" language="java" name="it.csi.siac.siaccorser.model.Operatore" 
+    project="corServerItf" file="/corServerItf/src/main/java/it/csi/siac/siaccorser/model/Operatore.java" binary="false">    
+    <position height="-1" width="-1" x="563" y="125"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="5" corner="BOTTOM_RIGHT" language="java" name="it.csi.siac.siaccorser.model.Errore" project="corServerItf" 
+    file="/corServerItf/src/main/java/it/csi/siac/siaccorser/model/Errore.java" binary="false">    
+    <position height="-1" width="-1" x="329" y="352"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <enumeration id="6" corner="BOTTOM_RIGHT" language="java" name="it.csi.siac.siaccorser.model.Esito" 
+    project="corServerItf" file="/corServerItf/src/main/java/it/csi/siac/siaccorser/model/Esito.java" binary="false">    
+    <position height="-1" width="-1" x="354" y="231"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </enumeration>  
+  <class id="7" corner="BOTTOM_RIGHT" language="java" name="it.csi.siac.siaccorser.model.Codifica" 
+    project="corServerItf" file="/corServerItf/src/main/java/it/csi/siac/siaccorser/model/Codifica.java" binary="false">    
+    <position height="-1" width="-1" x="325" y="447"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="8" corner="BOTTOM_RIGHT" language="java" name="it.csi.siac.siaccorser.model.Account" project="corServerItf" 
+    file="/corServerItf/src/main/java/it/csi/siac/siaccorser/model/Account.java" binary="false">    
+    <position height="-1" width="-1" x="771" y="124"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <association id="9">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="10" name="errori"/>      
+      <multiplicity id="11" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="12">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="13" name="operatore"/>      
+      <multiplicity id="14" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="15">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="16" name="richiedente"/>      
+      <multiplicity id="17" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="18">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="19" name="esito"/>      
+      <multiplicity id="20" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="21">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <association id="22">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="23" name="richiedente"/>      
+      <multiplicity id="24" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="25">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="26" name="account"/>      
+      <multiplicity id="27" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+    visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="false" package="false" protected="false" private="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

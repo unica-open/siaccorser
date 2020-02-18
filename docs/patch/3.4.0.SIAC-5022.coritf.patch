@@ -1,0 +1,13 @@
+Index: src/main/java/it/csi/siac/siaccorser/model/ParametroAzioneRichiesta.java
+===================================================================
+--- src/main/java/it/csi/siac/siaccorser/model/ParametroAzioneRichiesta.java	(revision 16064)
++++ src/main/java/it/csi/siac/siaccorser/model/ParametroAzioneRichiesta.java	(working copy)
+@@ -18,6 +18,8 @@
+ 	public static final String DESCRIZIONE_ANNO_BILANCIO = "it.csi.siac.siaccorser.model.descrizioneAnnoBilancio";
+ 	public static final String CODICE_FASE_ANNO_BILANCIO = "it.csi.siac.siaccorser.model.codiceFaseAnnoBilancio";
+ 	public static final String CODICE_FASE_ANNO_BILANCIO_PRECEDENTE = "it.csi.siac.siaccorser.model.codiceFaseAnnoBilancioPrecedente";
++	// SIAC-5022
++	public static final String BILANCIO_ANNO_PRECEDENTE = "it.csi.siac.siaccorser.model.bilancioAnnoPrecedente";
+ 
+ 	private String nome;
+ 	private String valore;

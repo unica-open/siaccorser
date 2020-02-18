@@ -1,0 +1,35 @@
+/*
+*SPDX-FileCopyrightText: Copyright 2020 | CSI Piemonte
+*SPDX-License-Identifier: EUPL-1.2
+*/
+package it.csi.siac.siaccorser.frontend.webservice.msg.file;
+
+import javax.xml.bind.annotation.XmlType;
+
+import it.csi.siac.siaccorser.frontend.webservice.CORSvcDictionary;
+import it.csi.siac.siaccorser.model.Ente;
+import it.csi.siac.siaccorser.model.ServiceRequest;
+import it.csi.siac.siaccorser.model.file.File;
+
+@XmlType(namespace = CORSvcDictionary.NAMESPACE)
+public class UploadFile extends ServiceRequest {
+	private Ente ente;
+	private File file;
+
+	public Ente getEnte() {
+		return ente;
+	}
+
+	public void setEnte(Ente ente) {
+		this.ente = ente;
+	}
+
+	public File getFile() {
+		return file;
+	}
+
+	public void setFile(File file) {
+		this.file = file;
+	}
+
+}

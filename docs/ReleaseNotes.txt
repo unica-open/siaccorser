@@ -1,0 +1,148 @@
+------------------------
+SIAC COR itf
+------------------------
+
+Funzionalita' rilasciate
+--------------------------
+build 22/11/2019 versione 4.5.0
+ SIAC-6888
+
+build 24/07/2019 versione  4.4.0
+ SIAC-6693
+
+build 26/06/2019 versione  4.3.0
+ clean_azione
+ 
+build 13/02/2019 versione  4.2.0
+ SIAC-6257
+ SIAC-6586
+ SIAC-6674
+
+build 23/01/2019 versione  4.1.0
+ refactoring
+
+build 25/10/2018 versione  4.0.0
+ incremento versione per modifiche architettura
+
+build 06/09/2018 versione 3.13.0
+ SIAC-6377
+
+build 26/07/2018 versione 3.12.0
+ SIAC-6175
+ SIAC-6206
+
+build 21/06/2018 versione 3.11.0
+ SIAC-6177
+ SIAC-6232
+
+build 24/05/2018 versione 3.10.0
+ SIAC-6076
+
+build 10/05/2018 versione 3.9.0
+ SIAC-6113
+
+build 25/01/2018 versione 3.8.0
+ SIAC-5333
+ SIAC-5376
+
+build 11/01/2018 versione 3.7.0
+ SIAC-5761
+
+build 14/12/2017 versione 3.6.0
+ Correzioni e pulizia JPA
+
+build 09/11/2017 versione 3.5.0
+ SIAC-5386
+
+build 26/10/2017 versione 3.4.0
+ SIAC-5376
+
+build 28/09/2017 versione 3.3.0
+ SIAC-5249
+
+build 31/08/2017 versione 3.2.0
+ SIAC-5022
+
+build 06/07/2017 versione 3.1.0
+ SIAC-5023
+
+build 29/06/2017 versione 3.0.0
+ SIAC-4961
+ SIAC-4970
+
+Versione SVILUPPO-1.4.0 --> build 2015-04-10 (Raffaela):
+rilasciata nuova struttura per info cassa economamle e sac, non si legano piu al ruolo_op / gruppo_ruolo_op ma direttamente all'account
+
+TAG SVILUPPO-1.3.0 --> build 2014-12-01 (Raffaela):
+- rilasciata modifica per gestione cassa economale (nuova entità) + aggiunta u Entità di quattro nuovi fields: dataInizioValidita, dataModifica, dataCancellazione e loginOperazione
+
+
+
+TAG SVILUPPO-1.0.0-021 --> build 2014-02-03 (Raffaela):
+- consegna scai lotto 3 con solo modifica della TipologiaClassificatore in cui sono stati aggiunti i classificatori generici dell'impegno
+
+
+
+build 2014-01-09 (Raffaela):
+- aggiunta la gestione dell'ente proprietario come variabile di processo e istanza, in modo da filtrare le attivita per ente
+- aggiunto servizio nel CoreService per modificare le variabili di processo senza eseguire il task
+
+build 2013-12-XX (Raffaela): 
+- Correzione leggi tree per codice famiglia (struttura amministrativa contabile) e non per id, inoltre prima si filtrava su siac_t_fam_tree ora si filtra su siac_d_fam_tree 
+- Aggiunto parametro nell'azionerichiesta ID_BILANCIO = "it.csi.siac.siaccorser.model.idBilancio";
+
+build 2013-XX-XX: SVILUPPO-1.0.0-016
+- Aggiornate le classi JpADao e BaseService per la gestione della transazione. In particolare aggiunta l'annostazione @Transactional in JpaDao e tolto il final al metodo executeService(REQ serviceRequest). Fatto u suggerimento di Domenico Lisi.
+- Modificate BaseService e ServiceResponse su indicazione di Prologic per gestire la propagazione dell'errore verso il servizio chiamante internamente ad una transazione.
+- Aggiunta ExecuteExternalServiceException per la gestione delle eccezioni dalle chiamate da servizi esterni
+
+build 2013-08-02: SVILUPPO-1.0.0-015
+- correzione sintattica di annoBilacio, descrizioneAnnoBilacio e codiceFaseAnnoBilacio in 'Bilancio'
+- allineamento BaseDadImpl con classe rilasciataci da Prologic
+
+build 2013-07-26: SVILUPPO-1.0.0-014
+- Allineamento ParametroAzioneRichiesta come da versione SVILUPPO-1.0.0-012, nel merge con la versione di Prologic ci erano sfuggite le modifiche di Letterio (3 costanti)
+
+build 2013-07-26: SVILUPPO-1.0.0-013
+- integrazine con versione rilasciata da prologic:
+ correzione baco su classificatori  
+
+
+
+build 2013-07-24: SVILUPPO-1.0.0-012
+- aggiunta la gestione dell'anno di esercizio come variabile di processo e istanza
+
+build 2013-07-10: SVILUPPO-1.0.0-008
+- definiti i nomi delle variabili di processo (in VariabileProcesso)
+- aggiunta l'implementazione di BpmService.getTaskInfo(String getIdIstanzaAttivita) con valutate le variabili
+- aggiunta la chiamata BpmService.getIdIstanzaProcesso(String getIdIstanzaAttivita)
+che viene usata dall'implementazione di CoreServiceImpl.execAzioneRichiesta() nel caso in cui
+l'azioneRichiesta sia di tipo ATTIVITA_PROCESSO
+
+build 2013-06-25: SVILUPPO-1.0.0-005
+- messe a fattor comune le classi perla gestione dell'autenticazione
+multisistema e fake
+- esposto il bonita server via web service
+- aggiunte le api per l'integrazione con bonita
+- deployato un webservice cxf con spring su JBOSS 6 EAP USANDO 
+il supporto a ws che fornisce JBOSS, iniettando servizi con spring
+- evitato il problema del non-repeatable read 
+(http://docs.oracle.com/javaee/6/api/javax/persistence/LockModeType.html).
+- modificato il build che cancelli e riscriva la dir build/temp, altrimenti in 
+fase di costruzione dei pacchetti si ottenevano cose non sempre aggiornate al 100%
+- realizzato il layer dao su JPA/hibernate
+- costruito il progetto non wso2 centrico
+
+
+
+TODO:
+
+Problema set date su entita
+[12/01/2015 11:50:35] Domenico Lisi: in realtà i get/set da aggiungere sarebbero di:
+[12/01/2015 11:50:39] Domenico Lisi: private Date dataCreazione;
+ private Date dataFineValidita;
+ private Date dataInizioValidita;
+ private Date dataModifica;
+ private Date dataCancellazione;
+[12/01/2015 11:51:14] Domenico Lisi: però aggiungerli dovunque è un bello sbattone (scusami per il termine)
+[12/01/2015 11:52:13] Domenico Lisi: per l'anomalia 1711 basta il dataFineValidita
