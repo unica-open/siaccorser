@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SPDX-FileCopyrightText: Copyright 2020 | CSI Piemonte
+SPDX-License-Identifier: EUPL-1.2
+-->
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+	<mapping map-id="SiacTOperazioneAsincrona_NotificaOperazioneAsincrona">
+		<class-a>it.csi.siac.siaccorser.model.NotificaOperazioneAsincrona</class-a>
+		<class-b>it.csi.siac.siaccorser.integration.entity.SiacTOperazioneAsincrona</class-b>
+
+		<field>
+			<a>messaggio</a>
+			<b>opasMsg</b>
+		</field>
+		<field>
+			<a>statoOperazione</a>
+			<b>opasStato</b>
+		</field>
+		<field>
+			<a>dataAvvioOperazione</a>
+			<b>opasAvvio</b>
+		</field>
+		<field>
+			<a>dataFineOperazione</a>
+			<b>opasFine</b>
+		</field>	
+		<field>
+			<a>accountElaborazione</a>
+			<b>siacTAccount.descrizione</b>
+		</field>		
+
+	</mapping>
+
+	<mapping map-id="SiacTOperazioneAsincronaDet_DettaglioOperazioneAsincrona">
+		<class-a>it.csi.siac.siaccorser.model.DettaglioOperazioneAsincrona</class-a>
+		<class-b>it.csi.siac.siaccorser.integration.entity.SiacTOperazioneAsincronaDet</class-b>
+
+		<field>
+			<a>codice</a>
+			<b>opasDetCode</b>
+		</field>
+		<field>
+			<a>descrizione</a>
+			<b>opasDetDesc</b>
+		</field>
+		<field>
+			<a>esito</a>
+			<b>opasDetEsito</b>
+		</field>
+		<field>
+			<a>messaggio</a>
+			<b>opasDetMsg</b>
+		</field>
+
+	</mapping>
+
+
+</mappings>

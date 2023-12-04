@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SPDX-FileCopyrightText: Copyright 2020 | CSI Piemonte
+SPDX-License-Identifier: EUPL-1.2
+-->
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+	<mapping >
+		<class-a>it.csi.siac.siaccorser.integration.entity.SiacTFile</class-a>
+		<class-b>it.csi.siac.siaccorser.model.file.File</class-b>
+
+		<field copy-by-reference="true">
+			<a>file</a>
+			<b>contenuto</b>
+		</field>
+
+		<field>
+			<a>tipoId</a>
+			<b>tipo.uid</b>
+		</field>
+
+		 <field type="one-way">
+			<a>stato</a>
+			<b>statoFile</b>
+		</field>  
+
+	</mapping>
+
+	 <mapping type="one-way">
+		<class-a>it.csi.siac.siaccorser.integration.entity.SiacDFileStato
+		</class-a>
+		<class-b
+			bean-factory="it.csi.siac.siaccorser.integration.entitymapping.beanfactory.StatoFileBeanFactory">it.csi.siac.siaccorser.model.file.StatoFile</class-b>
+	</mapping> 
+
+	<mapping type="one-way">
+		<class-a>it.csi.siac.siaccorser.integration.entity.SiacDFileTipo</class-a>
+		<class-b>it.csi.siac.siaccorser.model.file.TipoFile</class-b>
+		<field>
+			<a>azione</a>
+			<b>azioneServizio</b>
+		</field>
+	</mapping>
+
+	<mapping type="one-way">
+		<class-a>it.csi.siac.siaccorser.integration.entity.SiacTAzione
+		</class-a>
+		<class-b>it.csi.siac.siaccorser.model.Azione</class-b>
+		<field-exclude>
+			<a>tipo</a>
+			<b>tipo</b>
+		</field-exclude>
+		<field-exclude>
+			<a>verificaSAC</a>
+			<b>verificaSAC</b>
+		</field-exclude>
+	</mapping>
+
+
+</mappings>
